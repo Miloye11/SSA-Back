@@ -66,7 +66,7 @@ namespace DataLayer
 
                 SqlCommand command = new SqlCommand();
                 command.Connection = dataConnection;
-                command.CommandText = "UPDATE Students SET"
+                command.CommandText = "UPDATE Cities SET"
                     + " Name= '" + c.City_Name + "'"
                     + ", Ppt= '" + c.Ppt + "'"
                     + "WHERE City_Id=" + c.City_Id;

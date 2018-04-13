@@ -10,7 +10,9 @@ namespace WebApi
         public static void Register(HttpConfiguration config)
         {
             // Web API configuration and services
+            config.Formatters.Remove(config.Formatters.XmlFormatter);
 
+            config.DependencyResolver = new NinjectResolver();
             // Web API routes
             config.MapHttpAttributeRoutes();
 
