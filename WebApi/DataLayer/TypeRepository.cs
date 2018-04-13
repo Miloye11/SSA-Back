@@ -13,7 +13,7 @@ namespace DataLayer
         //konekcioni string
         private string ConnectionString = ConfigurationManager.AppSettings["ConnectionString"];
 
-        //metoda za vracanje svih gradova
+        //metoda za vracanje svih tipova
         public List<DataLayer.Models.Type> GetAllTypes()
         {
             List<DataLayer.Models.Type> listToReturn = new List<DataLayer.Models.Type>();
@@ -38,7 +38,7 @@ namespace DataLayer
             return listToReturn;
         }
 
-        //metoda za ubacivanje u tabelu gradova
+        //metoda za ubacivanje u tabelu tipovi
         public int InsertTypes(DataLayer.Models.Type t)
         {
             using (SqlConnection dataConnection = new SqlConnection(ConnectionString))
@@ -54,7 +54,7 @@ namespace DataLayer
             }
         }
 
-        //metoda za update gradova
+        //metoda za update tipova
         public int UpdateTypes(DataLayer.Models.Type t)
         {
             using (SqlConnection dataConnection = new SqlConnection(ConnectionString))
