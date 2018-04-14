@@ -61,7 +61,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CityRepository.cs" />
+    <Compile Include="IPersonRepository.cs" />
     <Compile Include="ITypeRepository.cs" />
+    <Compile Include="Models\Person.cs" />
+    <Compile Include="PersonRepository.cs" />
     <Compile Include="TypeRepository.cs" />
     <Compile Include="ICityRepository.cs" />
     <Compile Include="Models\City.cs" />
