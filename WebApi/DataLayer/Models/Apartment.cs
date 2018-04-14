@@ -10,5 +10,7 @@
         public string Status { get; set; }
         public int Type_Id { get; set; }
         public int City_Id { get; set; }
+
+        public Apartment() { }
     }
 }
