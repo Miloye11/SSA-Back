@@ -1,10 +1,6 @@
 ﻿using DataLayer;
 using DataLayer.Models;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BussinesLayer
 {
@@ -31,7 +27,7 @@ namespace BussinesLayer
                 return null;
             }
         }
-        
+
         //metoda koja ubacuje podatke u tabelu gradova
         public bool InsertCities(City c)
         {
@@ -51,12 +47,9 @@ namespace BussinesLayer
             bool result = false;
             if (c.City_Id != 0 && this.cityRepository.UpdateCities(c) > 0)
             {
-                
                 result = true;
             }
             return result;
         }
-
-
     }
 }
