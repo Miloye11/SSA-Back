@@ -34,3 +34,21 @@ C:\Users\Marko\Documents\SSA-Projekat-Back\WebApi\DataLayer\bin\Debug\Ninject.Ex
 C:\Users\Marko\Documents\SSA-Projekat-Back\WebApi\DataLayer\bin\Debug\System.Net.Http.Formatting.xml
 C:\Users\Marko\Documents\SSA-Projekat-Back\WebApi\DataLayer\bin\Debug\System.Web.Http.xml
 C:\Users\Marko\Documents\SSA-Projekat-Back\WebApi\DataLayer\obj\Debug\DataLayer.csproj.CopyComplete
+C:\Users\djule\source\PortalSSA - Projekat\WebApi\DataLayer\bin\Debug\DataLayer.dll
+C:\Users\djule\source\PortalSSA - Projekat\WebApi\DataLayer\bin\Debug\DataLayer.pdb
+C:\Users\djule\source\PortalSSA - Projekat\WebApi\DataLayer\bin\Debug\Newtonsoft.Json.dll
+C:\Users\djule\source\PortalSSA - Projekat\WebApi\DataLayer\bin\Debug\Ninject.dll
+C:\Users\djule\source\PortalSSA - Projekat\WebApi\DataLayer\bin\Debug\Ninject.Extensions.ChildKernel.dll
+C:\Users\djule\source\PortalSSA - Projekat\WebApi\DataLayer\bin\Debug\System.Net.Http.Formatting.dll
+C:\Users\djule\source\PortalSSA - Projekat\WebApi\DataLayer\bin\Debug\System.Web.Http.dll
+C:\Users\djule\source\PortalSSA - Projekat\WebApi\DataLayer\bin\Debug\WebApiContrib.dll
+C:\Users\djule\source\PortalSSA - Projekat\WebApi\DataLayer\bin\Debug\Newtonsoft.Json.xml
+C:\Users\djule\source\PortalSSA - Projekat\WebApi\DataLayer\bin\Debug\Ninject.xml
+C:\Users\djule\source\PortalSSA - Projekat\WebApi\DataLayer\bin\Debug\Ninject.Extensions.ChildKernel.xml
+C:\Users\djule\source\PortalSSA - Projekat\WebApi\DataLayer\bin\Debug\System.Net.Http.Formatting.xml
+C:\Users\djule\source\PortalSSA - Projekat\WebApi\DataLayer\bin\Debug\System.Web.Http.xml
+C:\Users\djule\source\PortalSSA - Projekat\WebApi\DataLayer\obj\Debug\DataLayer.csprojResolveAssemblyReference.cache
+C:\Users\djule\source\PortalSSA - Projekat\WebApi\DataLayer\obj\Debug\DataLayer.csproj.CoreCompileInputs.cache
+C:\Users\djule\source\PortalSSA - Projekat\WebApi\DataLayer\obj\Debug\DataLayer.csproj.CopyComplete
+C:\Users\djule\source\PortalSSA - Projekat\WebApi\DataLayer\obj\Debug\DataLayer.dll
+C:\Users\djule\source\PortalSSA - Projekat\WebApi\DataLayer\obj\Debug\DataLayer.pdb

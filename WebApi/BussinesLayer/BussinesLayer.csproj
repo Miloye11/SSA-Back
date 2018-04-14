@@ -64,9 +64,11 @@
     <Compile Include="IApartmentBusiness.cs" />
     <Compile Include="ICityBusiness.cs" />
     <Compile Include="IPersonBusiness.cs" />
+    <Compile Include="IRecordBusiness.cs" />
     <Compile Include="ITypeBusiness.cs" />
     <Compile Include="PersonBusiness.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RecordBusiness.cs" />
     <Compile Include="TypeBusiness.cs" />
   </ItemGroup>
   <ItemGroup>

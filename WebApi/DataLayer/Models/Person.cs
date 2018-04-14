@@ -7,5 +7,7 @@
         public string Surname { get; set; }
         public string JMBG { get; set; }
         public int Card_Number { get; set; }
+
+        public Person() { }
     }
 }

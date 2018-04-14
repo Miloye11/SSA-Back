@@ -58,3 +58,33 @@ C:\Users\Marko\Documents\SSA-Projekat-Back\WebApi\WebApi\bin\System.Net.Http.For
 C:\Users\Marko\Documents\SSA-Projekat-Back\WebApi\WebApi\bin\System.Web.Http.xml
 C:\Users\Marko\Documents\SSA-Projekat-Back\WebApi\WebApi\bin\System.Web.Http.WebHost.xml
 C:\Users\Marko\Documents\SSA-Projekat-Back\WebApi\WebApi\obj\Debug\WebApi.csproj.CopyComplete
+C:\Users\djule\source\PortalSSA - Projekat\WebApi\WebApi\bin\WebApi.dll.config
+C:\Users\djule\source\PortalSSA - Projekat\WebApi\WebApi\bin\WebApi.dll
+C:\Users\djule\source\PortalSSA - Projekat\WebApi\WebApi\bin\WebApi.pdb
+C:\Users\djule\source\PortalSSA - Projekat\WebApi\WebApi\bin\BussinesLayer.dll
+C:\Users\djule\source\PortalSSA - Projekat\WebApi\WebApi\bin\DataLayer.dll
+C:\Users\djule\source\PortalSSA - Projekat\WebApi\WebApi\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\djule\source\PortalSSA - Projekat\WebApi\WebApi\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\djule\source\PortalSSA - Projekat\WebApi\WebApi\bin\Newtonsoft.Json.dll
+C:\Users\djule\source\PortalSSA - Projekat\WebApi\WebApi\bin\Ninject.dll
+C:\Users\djule\source\PortalSSA - Projekat\WebApi\WebApi\bin\Ninject.Extensions.ChildKernel.dll
+C:\Users\djule\source\PortalSSA - Projekat\WebApi\WebApi\bin\Swashbuckle.Core.dll
+C:\Users\djule\source\PortalSSA - Projekat\WebApi\WebApi\bin\System.Net.Http.Formatting.dll
+C:\Users\djule\source\PortalSSA - Projekat\WebApi\WebApi\bin\System.Web.Http.dll
+C:\Users\djule\source\PortalSSA - Projekat\WebApi\WebApi\bin\System.Web.Http.WebHost.dll
+C:\Users\djule\source\PortalSSA - Projekat\WebApi\WebApi\bin\WebActivatorEx.dll
+C:\Users\djule\source\PortalSSA - Projekat\WebApi\WebApi\bin\WebApiContrib.dll
+C:\Users\djule\source\PortalSSA - Projekat\WebApi\WebApi\bin\BussinesLayer.pdb
+C:\Users\djule\source\PortalSSA - Projekat\WebApi\WebApi\bin\DataLayer.pdb
+C:\Users\djule\source\PortalSSA - Projekat\WebApi\WebApi\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\djule\source\PortalSSA - Projekat\WebApi\WebApi\bin\Newtonsoft.Json.xml
+C:\Users\djule\source\PortalSSA - Projekat\WebApi\WebApi\bin\Ninject.xml
+C:\Users\djule\source\PortalSSA - Projekat\WebApi\WebApi\bin\Ninject.Extensions.ChildKernel.xml
+C:\Users\djule\source\PortalSSA - Projekat\WebApi\WebApi\bin\System.Net.Http.Formatting.xml
+C:\Users\djule\source\PortalSSA - Projekat\WebApi\WebApi\bin\System.Web.Http.xml
+C:\Users\djule\source\PortalSSA - Projekat\WebApi\WebApi\bin\System.Web.Http.WebHost.xml
+C:\Users\djule\source\PortalSSA - Projekat\WebApi\WebApi\obj\Debug\WebApi.csprojResolveAssemblyReference.cache
+C:\Users\djule\source\PortalSSA - Projekat\WebApi\WebApi\obj\Debug\WebApi.csproj.CoreCompileInputs.cache
+C:\Users\djule\source\PortalSSA - Projekat\WebApi\WebApi\obj\Debug\WebApi.csproj.CopyComplete
+C:\Users\djule\source\PortalSSA - Projekat\WebApi\WebApi\obj\Debug\WebApi.dll
+C:\Users\djule\source\PortalSSA - Projekat\WebApi\WebApi\obj\Debug\WebApi.pdb

@@ -70,5 +70,42 @@ namespace DataLayer
                 return command.ExecuteNonQuery();
             }
         }
+
+        //----------------  DEO KOJI RADI DJUSIC!  --------------------------------------------------------------
+
+        //metoda za update statusa stana na SLOBODAN kada se izvrsi insert u RECORD
+        public int UpdateAppartementSlobodan(int Apartment_Id)
+        {
+            using (SqlConnection dataConnection = new SqlConnection(this.ConnectionString))
+            {
+                dataConnection.Open();
+
+                SqlCommand command = new SqlCommand(); // kreiranje SQL komande
+                command.Connection = dataConnection;// ------------------PITATI I PROVERITI KAKO SE RADI UPDATE, DAL SE OVDE PISE ULAZ/IZLAZ ILI U POSTMANU!?
+                command.CommandText = "UPDATE Apartments SET Status = 'Slobodan' WHERE Apartment_Id = " + Apartment_Id + "";
+
+                // SQL data reader dobija vrednost virtuelne tabele koja je vraćena iz baze
+                return command.ExecuteNonQuery();
+            }
+        }
+
+        //metoda za update statusa stana na Zauzeto kada se izvrsi insert u records za istu osobu
+        public int UpdateAppartementZauzet(int Apartment_Id)
+        {
+            using (SqlConnection dataConnection = new SqlConnection(this.ConnectionString))
+            {
+                dataConnection.Open();
+
+                SqlCommand command = new SqlCommand(); // kreiranje SQL komande
+                command.Connection = dataConnection;
+                command.CommandText = "UPDATE Apartments SET Status = 'Zauzet' WHERE Apartment_Id = " + Apartment_Id + "";
+
+                // SQL data reader dobija vrednost virtuelne tabele koja je vraćena iz baze
+                return command.ExecuteNonQuery();
+            }
+        }
+
+        //----------------  DEO KOJI RADI DJUSIC!  --------------------------------------------------------------
+
     }
 }

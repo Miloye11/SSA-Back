@@ -38,3 +38,23 @@ C:\Users\Marko\Documents\SSA-Projekat-Back\WebApi\BussinesLayer\bin\Debug\Ninjec
 C:\Users\Marko\Documents\SSA-Projekat-Back\WebApi\BussinesLayer\bin\Debug\System.Net.Http.Formatting.xml
 C:\Users\Marko\Documents\SSA-Projekat-Back\WebApi\BussinesLayer\bin\Debug\System.Web.Http.xml
 C:\Users\Marko\Documents\SSA-Projekat-Back\WebApi\BussinesLayer\obj\Debug\BussinesLayer.csproj.CopyComplete
+C:\Users\djule\source\PortalSSA - Projekat\WebApi\BussinesLayer\bin\Debug\BussinesLayer.dll
+C:\Users\djule\source\PortalSSA - Projekat\WebApi\BussinesLayer\bin\Debug\BussinesLayer.pdb
+C:\Users\djule\source\PortalSSA - Projekat\WebApi\BussinesLayer\bin\Debug\DataLayer.dll
+C:\Users\djule\source\PortalSSA - Projekat\WebApi\BussinesLayer\bin\Debug\Newtonsoft.Json.dll
+C:\Users\djule\source\PortalSSA - Projekat\WebApi\BussinesLayer\bin\Debug\Ninject.dll
+C:\Users\djule\source\PortalSSA - Projekat\WebApi\BussinesLayer\bin\Debug\Ninject.Extensions.ChildKernel.dll
+C:\Users\djule\source\PortalSSA - Projekat\WebApi\BussinesLayer\bin\Debug\System.Net.Http.Formatting.dll
+C:\Users\djule\source\PortalSSA - Projekat\WebApi\BussinesLayer\bin\Debug\System.Web.Http.dll
+C:\Users\djule\source\PortalSSA - Projekat\WebApi\BussinesLayer\bin\Debug\WebApiContrib.dll
+C:\Users\djule\source\PortalSSA - Projekat\WebApi\BussinesLayer\bin\Debug\DataLayer.pdb
+C:\Users\djule\source\PortalSSA - Projekat\WebApi\BussinesLayer\bin\Debug\Newtonsoft.Json.xml
+C:\Users\djule\source\PortalSSA - Projekat\WebApi\BussinesLayer\bin\Debug\Ninject.xml
+C:\Users\djule\source\PortalSSA - Projekat\WebApi\BussinesLayer\bin\Debug\Ninject.Extensions.ChildKernel.xml
+C:\Users\djule\source\PortalSSA - Projekat\WebApi\BussinesLayer\bin\Debug\System.Net.Http.Formatting.xml
+C:\Users\djule\source\PortalSSA - Projekat\WebApi\BussinesLayer\bin\Debug\System.Web.Http.xml
+C:\Users\djule\source\PortalSSA - Projekat\WebApi\BussinesLayer\obj\Debug\BussinesLayer.csprojResolveAssemblyReference.cache
+C:\Users\djule\source\PortalSSA - Projekat\WebApi\BussinesLayer\obj\Debug\BussinesLayer.csproj.CoreCompileInputs.cache
+C:\Users\djule\source\PortalSSA - Projekat\WebApi\BussinesLayer\obj\Debug\BussinesLayer.csproj.CopyComplete
+C:\Users\djule\source\PortalSSA - Projekat\WebApi\BussinesLayer\obj\Debug\BussinesLayer.dll
+C:\Users\djule\source\PortalSSA - Projekat\WebApi\BussinesLayer\obj\Debug\BussinesLayer.pdb
