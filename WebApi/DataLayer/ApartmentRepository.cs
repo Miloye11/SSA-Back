@@ -1,17 +1,12 @@
 ﻿using DataLayer.Models;
-using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DataLayer
 {
-   public class ApartmentRepository : IApartmentRepository
+    public class ApartmentRepository : IApartmentRepository
     {
-
         //konekcioni string
         private string ConnectionString = ConfigurationManager.AppSettings["ConnectionString"];
 
@@ -55,7 +50,7 @@ namespace DataLayer
 
                 SqlCommand command = new SqlCommand();
                 command.Connection = dataConnection;
-                command.CommandText = "INSERT INTO Apartments VALUES ('" + a.Address + "', " + a.Apartment_Number + ", '"+a.Owner_Name+"','" + a.Owner_Surname + "', '" + a.Status + "', " + a.Type_Id + ", " + a.City_Id + ")";
+                command.CommandText = "INSERT INTO Apartments VALUES ('" + a.Address + "', " + a.Apartment_Number + ", '" + a.Owner_Name + "','" + a.Owner_Surname + "', '" + a.Status + "', " + a.Type_Id + ", " + a.City_Id + ")";
 
                 return command.ExecuteNonQuery();
             }
@@ -75,7 +70,5 @@ namespace DataLayer
                 return command.ExecuteNonQuery();
             }
         }
-
-
     }
 }

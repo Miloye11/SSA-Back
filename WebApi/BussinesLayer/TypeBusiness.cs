@@ -1,10 +1,5 @@
 ﻿using DataLayer;
-using DataLayer.Models;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BussinesLayer
 {
@@ -51,12 +46,9 @@ namespace BussinesLayer
             bool result = false;
             if (t.Type_Id != 0 && this.typeRepository.UpdateTypes(t) > 0)
             {
-
                 result = true;
             }
             return result;
         }
-
-
     }
 }

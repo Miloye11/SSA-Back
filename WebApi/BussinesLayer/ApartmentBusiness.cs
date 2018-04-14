@@ -1,16 +1,11 @@
 ﻿using DataLayer;
 using DataLayer.Models;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BussinesLayer
 {
-   public class ApartmentBusiness : IApartmentBusiness
+    public class ApartmentBusiness : IApartmentBusiness
     {
-
         private IApartmentRepository apartmentRepository;
 
         public ApartmentBusiness(IApartmentRepository apartmentRepository)
@@ -18,7 +13,6 @@ namespace BussinesLayer
             // inicijalizacija repozitorijuma "ubrizgavanjem" kroz konstruktor
             this.apartmentRepository = apartmentRepository;
         }
-
 
         // metoda koja vraća listu svih stanova ako ih uopšte ima u bazi
         public List<Apartment> GetAllApartments()
@@ -52,9 +46,7 @@ namespace BussinesLayer
             {
                 return false;
             }
-
         }
-
 
         //metoda koja azurira podatke u tabeli Apartments
         public bool UpdateApartment(Apartment a)
@@ -74,7 +66,6 @@ namespace BussinesLayer
             {
                 return false;
             }
-
         }
     }
 }

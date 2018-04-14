@@ -1,14 +1,10 @@
 ﻿using DataLayer;
 using DataLayer.Models;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BussinesLayer
 {
-   public class PersonBusiness : IPersonBusiness
+    public class PersonBusiness : IPersonBusiness
     {
         private IPersonRepository personRepository;
 
@@ -35,9 +31,9 @@ namespace BussinesLayer
         //metoda koja ubacuje podatke u tabelu Persons
         public bool InsertPerson(Person p)
         {
-            if( p != null)
+            if (p != null)
             {
-                if (this.personRepository.InsertPersons(p) > 0)
+                if (this.personRepository.InsertPerson(p) > 0)
                 {
                     return true;
                 }
@@ -50,16 +46,14 @@ namespace BussinesLayer
             {
                 return false;
             }
-            
         }
-
 
         //metoda koja azurira podatke u tabeli Persons
         public bool UpdatePerson(Person p)
         {
             if (p != null && p.Person_Id != 0)
             {
-                if (this.personRepository.UpdatePersons(p) > 0)
+                if (this.personRepository.UpdatePerson(p) > 0)
                 {
                     return true;
                 }
@@ -72,9 +66,6 @@ namespace BussinesLayer
             {
                 return false;
             }
-
         }
-
-
     }
 }

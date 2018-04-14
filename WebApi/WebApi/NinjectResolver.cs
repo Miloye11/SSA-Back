@@ -4,8 +4,6 @@ using Ninject;
 using Ninject.Extensions.ChildKernel;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using System.Web.Http.Dependencies;
 
 namespace WebApi
@@ -58,8 +56,11 @@ namespace WebApi
             kernel.Bind<ICityBusiness>().To<CityBusiness>().InSingletonScope();
             kernel.Bind<ITypeRepository>().To<TypeRepository>().InSingletonScope();
             kernel.Bind<ITypeBusiness>().To<TypeBusiness>().InSingletonScope();
+            kernel.Bind<IPersonRepository>().To<PersonRepository>().InSingletonScope();
+            kernel.Bind<IPersonBusiness>().To<PersonBusiness>().InSingletonScope();
+            kernel.Bind<IApartmentRepository>().To<ApartmentRepository>().InSingletonScope();
+            kernel.Bind<IApartmentBusiness>().To<ApartmentBusiness>().InSingletonScope();
             return kernel;
         }
-
     }
 }

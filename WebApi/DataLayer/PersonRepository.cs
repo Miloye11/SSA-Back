@@ -3,13 +3,10 @@ using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DataLayer
 {
-   public class PersonRepository : IPersonRepository
+    public class PersonRepository : IPersonRepository
     {
         //konekcioni string
         private string ConnectionString = ConfigurationManager.AppSettings["ConnectionString"];
@@ -42,7 +39,6 @@ namespace DataLayer
             return listToReturn;
         }
 
-
         //metoda za ubacivanje nove osobe u tabelu Persons
         public int InsertPerson(Person p)
         {
@@ -58,6 +54,7 @@ namespace DataLayer
             }
         }
 
+        
 
         //metoda za update/azuriranje osoba u tabeli Persons
         public int UpdatePerson(Person p)
@@ -74,5 +71,9 @@ namespace DataLayer
             }
         }
 
+        public int UpdatePersons(Person p)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

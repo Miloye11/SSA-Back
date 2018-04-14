@@ -1,11 +1,7 @@
 ﻿using DataLayer.Models;
-using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DataLayer
 {
@@ -21,13 +17,13 @@ namespace DataLayer
             using (SqlConnection dataConnection = new SqlConnection(this.ConnectionString))
             {
                 dataConnection.Open();
-                
+
                 SqlCommand command = new SqlCommand();
                 command.Connection = dataConnection;
                 command.CommandText = "SELECT * FROM Cities";
-                
+
                 SqlDataReader dataReader = command.ExecuteReader();
-                
+
                 while (dataReader.Read())
                 {
                     City c = new City();
@@ -51,8 +47,8 @@ namespace DataLayer
                 command.Connection = dataConnection;
                 command.CommandText = "INSERT INTO Cities VALUES ('" +
                     c.City_Name + "', '" +
-                    c.Ppt +"')";
-                
+                    c.Ppt + "')";
+
                 return command.ExecuteNonQuery();
             }
         }
@@ -70,12 +66,9 @@ namespace DataLayer
                     + " Name= '" + c.City_Name + "'"
                     + ", Ppt= '" + c.Ppt + "'"
                     + "WHERE City_Id=" + c.City_Id;
-                
+
                 return command.ExecuteNonQuery();
             }
         }
-
-
-
     }
 }
