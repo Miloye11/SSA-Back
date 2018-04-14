@@ -14,7 +14,7 @@ namespace DataLayer
         //konekcioni string
         private string ConnectionString = ConfigurationManager.AppSettings["ConnectionString"];
 
-        //metoda za vracanje svih osoba iz tabele Persons
+        //metoda za prikaz svih osoba iz tabele Persons
         public List<Person> GetAllPersons()
         {
             List<Person> listToReturn = new List<Person>();
@@ -44,7 +44,7 @@ namespace DataLayer
 
 
         //metoda za ubacivanje nove osobe u tabelu Persons
-        public int InsertPersons(Person p)
+        public int InsertPerson(Person p)
         {
             using (SqlConnection dataConnection = new SqlConnection(ConnectionString))
             {
@@ -60,7 +60,7 @@ namespace DataLayer
 
 
         //metoda za update/azuriranje osoba u tabeli Persons
-        public int UpdatePersons(Person p)
+        public int UpdatePerson(Person p)
         {
             using (SqlConnection dataConnection = new SqlConnection(ConnectionString))
             {
