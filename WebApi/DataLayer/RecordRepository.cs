@@ -62,11 +62,60 @@ namespace DataLayer
             return list;
         }
 
-        //kreiranje metode za unos novog RECORD-A u bazu 
+        //METODA KOJU JE RADILA DJINA ZA INSERT!!!
+        public List<Record> GetMaxRecords(int ID)
+        {
+            List<Record> list = new List<Record>();
+
+            using (SqlConnection dataConnection = new SqlConnection(this.ConnectionString))
+            {
+                dataConnection.Open();
+
+                SqlCommand command = new SqlCommand(); // kreiranje SQL komande
+                command.Connection = dataConnection;
+                command.CommandText = "SELECT status, MAX (date_time) FROM Records WHERE Person_Id =" + ID + "GROUP BY status";
+
+                // SQL data reader dobija vrednost virtuelne tabele koja je vraćena iz baze
+                SqlDataReader dataReader = command.ExecuteReader();
+
+                // za svaki red koji je dobijen na osnovu SQL SELECT upita
+                // kreirati klasu Student, dodeliti joj vrednosti i ubaciti je u listu
+                while (dataReader.Read())
+                {
+                    Record a = new Record();
+                    a.Record_Status = dataReader.GetString(0);
+                    a.Date_Time = dataReader.GetDateTime(1);
+                    list.Add(a);
+                }
+            }
+            return list;
+        }
+        
+        //kreiranje metode za unos novog RECORD-A u bazu - * * - DJINA IZMENILA OVU METODU
         public int InsertRecord(Record r)
         {
             using (SqlConnection dataConnection = new SqlConnection(this.ConnectionString))
             {
+                //DJINA DODALA OVE LINIJE KODA
+                List<Record> list = new List<Record>();
+                list = GetMaxRecords(r.P_Person_Id);
+                if (list.Count > 0)
+                {
+                    Record r1 = new Record();
+                    Record r2 = new Record();
+                    r1 = list.First();
+                    r2 = list.Last();
+                    string stat;
+
+                    if (r1.Date_Time > r2.Date_Time)
+                        stat = r1.Record_Status;
+                    else
+                        stat = r2.Record_Status;
+
+                    if (r.Record_Status == stat)
+                        return 0;
+                }
+
                 dataConnection.Open();
 
                 SqlCommand command = new SqlCommand(); // kreiranje SQL komande

@@ -28,17 +28,24 @@ namespace BussinesLayer
             re = r;
             re.A_Apartment_Id = r.A_Apartment_Id;
 
-            if (re.A_Apartment_Id > 0)
+            if (variable > 0)
             {
-                if (re.Record_Status == "Ulaz")
+                if (re.A_Apartment_Id > 0)
                 {
-                    this.apartmentRepository.UpdateAppartementZauzet(re.A_Apartment_Id);
-                    return true;
-                }
-                else if (re.Record_Status == "Izlaz")
-                {
-                    this.apartmentRepository.UpdateAppartementSlobodan(re.A_Apartment_Id);
-                    return true;
+                    if (re.Record_Status == "Ulaz")
+                    {
+                        this.apartmentRepository.UpdateAppartementZauzet(re.A_Apartment_Id);
+                        return true;
+                    }
+                    else if (re.Record_Status == "Izlaz")
+                    {
+                        this.apartmentRepository.UpdateAppartementSlobodan(re.A_Apartment_Id);
+                        return true;
+                    }
+                    else
+                    {
+                        return false;
+                    }
                 }
                 else
                 {
