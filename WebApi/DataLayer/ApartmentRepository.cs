@@ -29,12 +29,11 @@ namespace DataLayer
                     Apartment a = new Apartment();
                     a.Apartment_Id = dataReader.GetInt32(0);
                     a.Address = dataReader.GetString(1);
-                    a.Apartment_Number = dataReader.GetInt32(2);
-                    a.Owner_Name = dataReader.GetString(3);
-                    a.Owner_Surname = dataReader.GetString(4);
-                    a.Status = dataReader.GetString(5);
-                    a.Type_Id = dataReader.GetInt32(6);
-                    a.City_Id = dataReader.GetInt32(7);
+                    a.Apartment_Number = dataReader.GetInt32(2);                   
+                    a.Status = dataReader.GetString(3);
+                    a.Type_Id = dataReader.GetInt32(4);
+                    a.City_Id = dataReader.GetInt32(5);
+                    a.Owner_Id = dataReader.GetInt32(6);
                     listToReturn.Add(a);
                 }
             }
@@ -50,7 +49,7 @@ namespace DataLayer
 
                 SqlCommand command = new SqlCommand();
                 command.Connection = dataConnection;
-                command.CommandText = "INSERT INTO Apartments VALUES ('" + a.Address + "', " + a.Apartment_Number + ", '" + a.Owner_Name + "','" + a.Owner_Surname + "', '" + a.Status + "', " + a.Type_Id + ", " + a.City_Id + ")";
+                command.CommandText = "INSERT INTO Apartments VALUES ('" + a.Address + "', " + a.Apartment_Number + ", '" + a.Status + "', " + a.Type_Id + ", " + a.City_Id + ", " + a.Owner_Id + ")";
 
                 return command.ExecuteNonQuery();
             }
@@ -65,13 +64,13 @@ namespace DataLayer
 
                 SqlCommand command = new SqlCommand();
                 command.Connection = dataConnection;
-                command.CommandText = "UPDATE Apartments SET Address ='" + a.Address + "', Apartment_Number=" + a.Apartment_Number + ", Owner_Name = '" + a.Owner_Name + "', Owner_Surname = '" + a.Owner_Surname + "', Status = '" + a.Status + "', Type_Id = " + a.Type_Id + ", City_Id=" + a.City_Id + " WHERE Apartment_Id  = " + a.Apartment_Id + " ";
+                command.CommandText = "UPDATE Apartments SET Address ='" + a.Address + "', Apartment_Number=" + a.Apartment_Number + ", Status = '" + a.Status + "', Type_Id = " + a.Type_Id + ", City_Id=" + a.City_Id + ", Owner_Id=" + a.Owner_Id + " WHERE Apartment_Id  = " + a.Apartment_Id + " ";
 
                 return command.ExecuteNonQuery();
             }
         }
 
-        //----------------  DEO KOJI RADI DJUSIC!  --------------------------------------------------------------
+        //----------------  DEO ZA UPDATE RECORDS!  --------------------------------------------------------------
 
         //metoda za update statusa stana na SLOBODAN kada se izvrsi insert u RECORD
         public int UpdateAppartementSlobodan(int Apartment_Id)
@@ -105,7 +104,7 @@ namespace DataLayer
             }
         }
 
-        //----------------  DEO KOJI RADI DJUSIC!  --------------------------------------------------------------
+        //----------------  DEO ZA UPDATE RECORDS!  --------------------------------------------------------------
 
     }
 }

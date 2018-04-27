@@ -62,6 +62,8 @@ namespace WebApi
             kernel.Bind<IApartmentBusiness>().To<ApartmentBusiness>().InSingletonScope();
             kernel.Bind<IRecordRepository>().To<RecordRepository>().InSingletonScope();
             kernel.Bind<IRecordBusiness>().To<RecordBusiness>().InSingletonScope();
+            kernel.Bind<IOwnerRepository>().To<OwnerRepository>().InSingletonScope();
+            kernel.Bind<IOwnerBusiness>().To<OwnerBusiness>().InSingletonScope();
             return kernel;
         }
     }

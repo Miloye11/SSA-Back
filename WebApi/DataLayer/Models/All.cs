@@ -25,15 +25,23 @@ namespace DataLayer.Models
         public int Ppt { get; set; }
         public string City_Name { get; set; }
 
+        //Klasa Owner
+        public int Owner_Id { get; set; }
+        public string Owner_Name { get; set; }
+        public string Owner_Surname { get; set; }
+        public string Owner_JMBG { get; set; }
+        public int Owner_Card_Number { get; set; }
+        public string Username { get; set; }
+        public string Password { get; set; }
+
         //Klasa Apartment
         public int Apartment_Id { get; set; }
         public string Address { get; set; }
-        public int Apartment_Number { get; set; }
-        public string Owner_Name { get; set; }
-        public string Owner_Surname { get; set; }
+        public int Apartment_Number { get; set; }       
         public string Appartment_Status { get; set; }
         public int T_Type_Id { get; set; }
         public int C_City_Id { get; set; }
+        public int O_Owner_Id { get; set; }
 
         //klasa Record
         public int Record_Id { get; set; }

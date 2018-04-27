@@ -63,9 +63,11 @@
     <Compile Include="CityBusiness.cs" />
     <Compile Include="IApartmentBusiness.cs" />
     <Compile Include="ICityBusiness.cs" />
+    <Compile Include="IOwnerBusiness.cs" />
     <Compile Include="IPersonBusiness.cs" />
     <Compile Include="IRecordBusiness.cs" />
     <Compile Include="ITypeBusiness.cs" />
+    <Compile Include="OwnerBusiness.cs" />
     <Compile Include="PersonBusiness.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RecordBusiness.cs" />
