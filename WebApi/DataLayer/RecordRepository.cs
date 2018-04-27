@@ -1,5 +1,4 @@
-﻿/*-------------------------------- RADIO STEFAN DJUSIC ------------------------------------*/
-using DataLayer.Models;
+﻿using DataLayer.Models;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
@@ -30,7 +29,7 @@ namespace DataLayer
 
                 SqlCommand command = new SqlCommand(); // kreiranje SQL komande
                 command.Connection = dataConnection;
-                command.CommandText = "SELECT Records.Status, Records.Date_Time, Cities.Ppt, Cities.Name, Apartments.Address, Apartments.Apartment_Number, Apartments.Status, Types.Name, Persons.Name, Persons.Surname, Persons.Card_Number, Persons.JMBG, Apartments.Owner_Name, Apartments.Owner_Surname FROM Records JOIN Persons ON Records.Person_Id = Persons.Person_Id JOIN Apartments ON Records.Apartment_Id = Apartments.Apartment_Id JOIN Cities ON Apartments.City_Id = Cities.City_Id JOIN Types ON Apartments.Type_Id = Types.Type_Id";
+                command.CommandText = "SELECT Records.Status, Records.Date_Time, Cities.Ppt, Cities.Name, Apartments.Address, Apartments.Apartment_Number, Apartments.Status, Types.Name, Persons.Name, Persons.Surname, Persons.Card_Number, Persons.JMBG, Owners.Name, Owners.Surname, Owners.Card_Number, Owners.JMBG FROM Records JOIN Persons ON Records.Person_Id = Persons.Person_Id JOIN Apartments ON Records.Apartment_Id = Apartments.Apartment_Id JOIN Cities ON Apartments.City_Id = Cities.City_Id JOIN Types ON Apartments.Type_Id = Types.Type_Id JOIN Owners ON Apartments.Owner_Id = Owners.Owner_Id";
 
                 // SQL data reader dobija vrednost virtuelne tabele koja je vraćena iz baze
                 SqlDataReader dataReader = command.ExecuteReader();
@@ -55,6 +54,8 @@ namespace DataLayer
                     a.JMBG = dataReader.GetString(11);
                     a.Owner_Name = dataReader.GetString(12);
                     a.Owner_Surname = dataReader.GetString(13);
+                    a.Owner_Card_Number = dataReader.GetInt32(14);
+                    a.Owner_JMBG = dataReader.GetString(15);
 
                     list.Add(a);
                 }
@@ -62,7 +63,7 @@ namespace DataLayer
             return list;
         }
 
-        //METODA KOJU JE RADILA DJINA ZA INSERT!!!
+        //METODA POTREBNA ZA INSERT!!!
         public List<Record> GetMaxRecords(int ID)
         {
             List<Record> list = new List<Record>();
@@ -91,12 +92,12 @@ namespace DataLayer
             return list;
         }
         
-        //kreiranje metode za unos novog RECORD-A u bazu - * * - DJINA IZMENILA OVU METODU
+        //kreiranje metode za unos novog RECORD-A u bazu - * * 
         public int InsertRecord(Record r)
         {
             using (SqlConnection dataConnection = new SqlConnection(this.ConnectionString))
             {
-                //DJINA DODALA OVE LINIJE KODA
+                //DODATE OVE LINIJE KODA
                 List<Record> list = new List<Record>();
                 list = GetMaxRecords(r.P_Person_Id);
                 if (list.Count > 0)
