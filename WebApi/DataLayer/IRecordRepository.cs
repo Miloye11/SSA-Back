@@ -13,5 +13,8 @@ namespace DataLayer
         List<All> GetAllRecords();
         int InsertRecord(Record r);
         int UpdateRecord(Record r);
+        List<All> GetAllRecordsToday();
+        List<All> GetAllRecordsWeek();
+        List<All> GetAllRecordsMonth();
     }
 }

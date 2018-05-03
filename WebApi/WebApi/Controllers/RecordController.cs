@@ -43,5 +43,28 @@ namespace WebApi.Controllers
         {
             return this.recordBusiness.UpdateRecord(r);
         }
+
+        [HttpGet]
+        [Route("getallrecordstoday")]
+        public List<All> GetAllRecordsToday()
+        {
+            return this.recordBusiness.GetAllRecordsToday();
+        }
+        //Pozivanje preko ruke za ispis svih aktivnosti prema statusu Ulaz/Izlaz
+
+        //  //Pozivanje preko rute za ispis svih aktivnosti ove nedelje
+        [HttpGet]
+        [Route("getallrecordsweek")]
+        public List<All> GetAllRecordsWeek()
+        {
+            return this.recordBusiness.GetAllRecordsWeek();
+        }
+        //Pozivanje preko rute za ispis svih aktivnosti ovog meseca
+        [HttpGet]
+        [Route("getallrecordsmonth")]
+        public List<All> GetAllRecordsMonth()
+        {
+            return this.recordBusiness.GetAllRecordsMonth();
+        }
     }
 }
