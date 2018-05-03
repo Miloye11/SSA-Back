@@ -34,6 +34,30 @@ namespace DataLayer
             return listToReturn;
         }
 
+        //metoda za vracanje imena tipova
+        public List<DataLayer.Models.Type> GetAllTypeNames()
+        {
+            List<DataLayer.Models.Type> listToReturn = new List<DataLayer.Models.Type>();
+            using (SqlConnection dataConnection = new SqlConnection(this.ConnectionString))
+            {
+                dataConnection.Open();
+
+                SqlCommand command = new SqlCommand();
+                command.Connection = dataConnection;
+                command.CommandText = "SELECT Name FROM Types";
+
+                SqlDataReader dataReader = command.ExecuteReader();
+
+                while (dataReader.Read())
+                {
+                    DataLayer.Models.Type t = new DataLayer.Models.Type();
+                    t.Type_Name = dataReader.GetString(0);
+                    listToReturn.Add(t);
+                }
+            }
+            return listToReturn;
+        }
+
         //metoda za ubacivanje u tabelu tipovi
         public int InsertTypes(DataLayer.Models.Type t)
         {

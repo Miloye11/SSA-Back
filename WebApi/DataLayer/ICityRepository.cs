@@ -10,5 +10,7 @@ namespace DataLayer
         int InsertCities(City c);
 
         int UpdateCities(City c);
+
+        List<City> GetAllCityNames();
     }
 }

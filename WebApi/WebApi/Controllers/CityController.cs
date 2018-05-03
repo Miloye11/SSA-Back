@@ -21,6 +21,12 @@ namespace WebApi.Controllers
             return this.cityBusiness.GetAllCities();
         }
 
+        [Route("getallcitynames")]
+        public List<City> GetAllCityNames()
+        {
+            return this.cityBusiness.GetAllCityNames();
+        }
+
         [Route("insertcities")]
         [HttpPost]
         public bool InsertCities([FromBody]City c)

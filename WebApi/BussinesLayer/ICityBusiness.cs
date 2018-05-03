@@ -10,5 +10,7 @@ namespace BussinesLayer
         bool InsertCities(City c);
 
         bool UpdateCities(City c);
+
+        List<City> GetAllCityNames();
     }
 }

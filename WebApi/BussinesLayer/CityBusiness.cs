@@ -28,6 +28,20 @@ namespace BussinesLayer
             }
         }
 
+        // metoda koja vraća listu imena svih gradova ako ih uopšte ima u bazi
+        public List<City> GetAllCityNames()
+        {
+            List<City> cities = this.cityRepository.GetAllCityNames();
+            if (cities.Count > 0)
+            {
+                return cities;
+            }
+            else
+            {
+                return null;
+            }
+        }
+
         //metoda koja ubacuje podatke u tabelu gradova
         public bool InsertCities(City c)
         {

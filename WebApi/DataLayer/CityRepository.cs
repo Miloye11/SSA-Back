@@ -36,6 +36,29 @@ namespace DataLayer
             return listToReturn;
         }
 
+        //metoda za vracanje svih imena gradova
+        public List<City> GetAllCityNames()
+        {
+            List<City> listToReturn = new List<City>();
+            using (SqlConnection dataConnection = new SqlConnection(this.ConnectionString))
+            {
+                dataConnection.Open();
+
+                SqlCommand command = new SqlCommand();
+                command.Connection = dataConnection;
+                command.CommandText = "SELECT Name FROM Cities";
+
+                SqlDataReader dataReader = command.ExecuteReader();
+
+                while (dataReader.Read())
+                {
+                    City c = new City();
+                    c.City_Name = dataReader.GetString(0);
+                    listToReturn.Add(c);
+                }
+            }
+            return listToReturn;
+        }
         //metoda za ubacivanje u tabelu gradova
         public int InsertCities(City c)
         {

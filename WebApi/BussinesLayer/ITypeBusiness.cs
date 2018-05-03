@@ -9,5 +9,7 @@ namespace BussinesLayer
         bool InsertTypes(DataLayer.Models.Type t);
 
         bool UpdateTypes(DataLayer.Models.Type t);
+
+        List<DataLayer.Models.Type> GetAllTypeNames();
     }
 }

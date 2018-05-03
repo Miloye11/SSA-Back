@@ -9,5 +9,7 @@ namespace DataLayer
         int InsertTypes(DataLayer.Models.Type t);
 
         int UpdateTypes(DataLayer.Models.Type t);
+
+        List<DataLayer.Models.Type> GetAllTypeNames();
     }
 }

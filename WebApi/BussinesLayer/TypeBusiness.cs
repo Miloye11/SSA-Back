@@ -27,6 +27,20 @@ namespace BussinesLayer
             }
         }
 
+        //Metoda koja vraca imena svih tipova ako ih ima u bazi
+        public List<DataLayer.Models.Type> GetAllTypeNames()
+        {
+            List<DataLayer.Models.Type> types = this.typeRepository.GetAllTypeNames();
+            if (types.Count > 0)
+            {
+                return types;
+            }
+            else
+            {
+                return null;
+            }
+        }
+
         //metoda koja ubacuje podatke u tabelu tipova
         public bool InsertTypes(DataLayer.Models.Type t)
         {

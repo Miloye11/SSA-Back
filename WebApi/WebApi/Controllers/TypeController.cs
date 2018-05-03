@@ -20,6 +20,12 @@ namespace WebApi.Controllers
             return this.typeBusiness.GetAllTypes();
         }
 
+        [Route("getalltypenames")]
+        public List<DataLayer.Models.Type> GetAllTypeNames()
+        {
+            return this.typeBusiness.GetAllTypeNames();
+        }
+
         [Route("inserttypes")]
         [HttpPost]
         public bool InsertTypes([FromBody]DataLayer.Models.Type t)
