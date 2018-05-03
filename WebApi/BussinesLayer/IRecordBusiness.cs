@@ -13,5 +13,8 @@ namespace BussinesLayer
         bool InsertRecord(Record r);
         List<All> GetAllRecords();
         bool UpdateRecord(Record r);
+        List<All> GetAllRecordsToday();
+        List<All> GetAllRecordsWeek();
+        List<All> GetAllRecordsMonth();
     }
 }

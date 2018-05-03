@@ -143,5 +143,133 @@ namespace DataLayer
                 return command.ExecuteNonQuery();
             }
         }
-    }
+        //Vraca sve iz evidencije za danasnji dan
+
+        public List<All> GetAllRecordsToday()
+        {
+            List<All> list = new List<All>();
+
+            using (SqlConnection dataConnection = new SqlConnection(this.ConnectionString))
+            {
+                dataConnection.Open();
+
+                SqlCommand command = new SqlCommand(); // kreiranje SQL komande
+                command.Connection = dataConnection;
+                command.CommandText = "SELECT Records.Status,Records.Date_Time, Cities.Ppt, Cities.Name, Apartments.Address, Apartments.Apartment_Number, Apartments.Status, Types.Name, Persons.Name, Persons.Surname, Persons.Card_Number, Persons.JMBG FROM Records JOIN Persons ON Records.Person_Id = Persons.Person_Id JOIN Apartments ON Records.Apartment_Id = Apartments.Apartment_Id JOIN Cities ON Apartments.City_Id = Cities.City_Id JOIN Types ON Apartments.Type_Id = Types.Type_Id WHERE cast ([Date_Time] as date) = '" + DateTime.Today + "'";
+
+                // SQL data reader dobija vrednost virtuelne tabele koja je vraćena iz baze
+                SqlDataReader dataReader = command.ExecuteReader();
+
+                // za svaki red koji je dobijen na osnovu SQL SELECT upita
+                // kreirati klasu Student, dodeliti joj vrednosti i ubaciti je u listu
+                while (dataReader.Read())
+                {
+                    All a = new All();
+
+                    a.Record_Status = dataReader.GetString(0);
+                    a.Date_Time = dataReader.GetDateTime(1);
+                    a.Ppt = dataReader.GetInt32(2);
+                    a.City_Name = dataReader.GetString(3);
+                    a.Address = dataReader.GetString(4);
+                    a.Apartment_Number = dataReader.GetInt32(5);
+                    a.Appartment_Status = dataReader.GetString(6);
+                    a.Type_Name = dataReader.GetString(7);
+                    a.Person_Name = dataReader.GetString(8);
+                    a.Person_Surname = dataReader.GetString(9);
+                    a.Card_Number = dataReader.GetInt32(10);
+                    a.JMBG = dataReader.GetString(11);
+
+
+                    list.Add(a);
+                }
+            }
+            return list;
+        }
+        public List<All> GetAllRecordsWeek()
+        {
+            List<All> list = new List<All>();
+
+            using (SqlConnection dataConnection = new SqlConnection(this.ConnectionString))
+            {
+
+                dataConnection.Open();
+                SqlCommand command = new SqlCommand(); // kreiranje SQL komande
+                command.Connection = dataConnection;
+                command.CommandText = "SELECT Records.Status,Records.Date_Time, Cities.Ppt, Cities.Name, Apartments.Address, Apartments.Apartment_Number, Apartments.Status, Types.Name, Persons.Name, Persons.Surname, Persons.Card_Number, Persons.JMBG FROM Records JOIN Persons ON Records.Person_Id = Persons.Person_Id JOIN Apartments ON Records.Apartment_Id = Apartments.Apartment_Id JOIN Cities ON Apartments.City_Id = Cities.City_Id JOIN Types ON Apartments.Type_Id = Types.Type_Id WHERE cast ([Date_Time] as date) >= '" + DateTime.Today + "' AND cast ([Date_Time] as date)<= '" + DateTime.Today.AddDays(7) + "'";
+
+                // SQL data reader dobija vrednost virtuelne tabele koja je vraćena iz baze
+                SqlDataReader dataReader = command.ExecuteReader();
+
+                // za svaki red koji je dobijen na osnovu SQL SELECT upita
+                // kreirati klasu Student, dodeliti joj vrednosti i ubaciti je u listu
+                while (dataReader.Read())
+                {
+                    All a = new All();
+
+                    a.Record_Status = dataReader.GetString(0);
+                    a.Date_Time = dataReader.GetDateTime(1);
+                    a.Ppt = dataReader.GetInt32(2);
+                    a.City_Name = dataReader.GetString(3);
+                    a.Address = dataReader.GetString(4);
+                    a.Apartment_Number = dataReader.GetInt32(5);
+                    a.Appartment_Status = dataReader.GetString(6);
+                    a.Type_Name = dataReader.GetString(7);
+                    a.Person_Name = dataReader.GetString(8);
+                    a.Person_Surname = dataReader.GetString(9);
+                    a.Card_Number = dataReader.GetInt32(10);
+                    a.JMBG = dataReader.GetString(11);
+
+
+                    list.Add(a);
+                }
+            }
+            return list;
+        }
+
+        public List<All> GetAllRecordsMonth()
+        {
+            List<All> list = new List<All>();
+
+            using (SqlConnection dataConnection = new SqlConnection(this.ConnectionString))
+            {
+
+                dataConnection.Open();
+                SqlCommand command = new SqlCommand(); // kreiranje SQL komande
+                command.Connection = dataConnection;
+                command.CommandText = "SELECT Records.Status,Records.Date_Time, Cities.Ppt, Cities.Name, Apartments.Address, Apartments.Apartment_Number, Apartments.Status, Types.Name, Persons.Name, Persons.Surname, Persons.Card_Number, Persons.JMBG FROM Records JOIN Persons ON Records.Person_Id = Persons.Person_Id JOIN Apartments ON Records.Apartment_Id = Apartments.Apartment_Id JOIN Cities ON Apartments.City_Id = Cities.City_Id JOIN Types ON Apartments.Type_Id = Types.Type_Id WHERE cast ([Date_Time] as date) >= '" + DateTime.Today + "' AND cast ([Date_Time] as date)<= '" + DateTime.Today.AddMonths(1) + "'";
+
+                // SQL data reader dobija vrednost virtuelne tabele koja je vraćena iz baze
+                SqlDataReader dataReader = command.ExecuteReader();
+
+                // za svaki red koji je dobijen na osnovu SQL SELECT upita
+                // kreirati klasu Student, dodeliti joj vrednosti i ubaciti je u listu
+                while (dataReader.Read())
+                {
+                    All a = new All();
+
+                    a.Record_Status = dataReader.GetString(0);
+                    a.Date_Time = dataReader.GetDateTime(1);
+                    a.Ppt = dataReader.GetInt32(2);
+                    a.City_Name = dataReader.GetString(3);
+                    a.Address = dataReader.GetString(4);
+                    a.Apartment_Number = dataReader.GetInt32(5);
+                    a.Appartment_Status = dataReader.GetString(6);
+                    a.Type_Name = dataReader.GetString(7);
+                    a.Person_Name = dataReader.GetString(8);
+                    a.Person_Surname = dataReader.GetString(9);
+                    a.Card_Number = dataReader.GetInt32(10);
+                    a.JMBG = dataReader.GetString(11);
+
+
+                    list.Add(a);
+                }
+            }
+            return list;
+        }
+
+
+
+
+    
+}
 }

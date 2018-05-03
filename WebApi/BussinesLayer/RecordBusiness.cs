@@ -75,5 +75,20 @@ namespace BussinesLayer
                 return false;
             }
         }
+        //Logika za ispis aktivnosti za danas
+        public List<All> GetAllRecordsToday()
+        {
+            return this.recordRepository.GetAllRecordsToday();
+        }
+        //Logika za ispis aktivnosti za ovu nedelju
+        public List<All> GetAllRecordsWeek()
+        {
+            return this.recordRepository.GetAllRecordsWeek();
+        }
+        //Logika za ispis aktivnosti za ovaj mesec
+        public List<All> GetAllRecordsMonth()
+        {
+            return this.recordRepository.GetAllRecordsMonth();
+        }
     }
 }
