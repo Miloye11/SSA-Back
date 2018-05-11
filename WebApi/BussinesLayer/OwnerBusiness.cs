@@ -31,6 +31,23 @@ namespace BussinesLayer
                 return null;
             }
         }
+        
+        
+        // metoda koja vlasnika na osnovu username i password
+        public List<Owner> Login(string username, string password)
+        {
+            List<Owner> owners = this.ownerRepository.GetAllOwners();
+            if (owners.Count > 0)
+            {
+                return owners.Where(o => o.Username == username && o.Password == password).ToList();
+            }
+            else
+            {
+                return null;
+            }
+        }
+
+
 
 
         //metoda koja ubacuje podatke u tabelu Owners

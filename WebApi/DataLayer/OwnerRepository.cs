@@ -44,6 +44,7 @@ namespace DataLayer
             return listToReturn;
         }
 
+
         //metoda za ubacivanje nove osobe u tabelu Owners
         public int InsertOwner(Owner o)
         {
