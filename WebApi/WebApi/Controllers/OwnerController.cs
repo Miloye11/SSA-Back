@@ -25,6 +25,7 @@ namespace WebApi.Controllers
             return this.ownerBusiness.GetAllOwners();
         }
 
+
         [Route("insertowner")]
         [HttpPost]
         public bool InsertOwner([FromBody]Owner o)

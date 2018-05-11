@@ -14,5 +14,9 @@ namespace BussinesLayer
         bool InsertOwner(Owner o);
 
         bool UpdateOwner(Owner o);
+
+        List<Owner> Login(string username, string password);
+
+
     }
 }
