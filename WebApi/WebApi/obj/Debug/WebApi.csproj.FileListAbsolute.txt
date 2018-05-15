@@ -88,3 +88,32 @@ C:\Users\djule\source\PortalSSA - Projekat\WebApi\WebApi\obj\Debug\WebApi.csproj
 C:\Users\djule\source\PortalSSA - Projekat\WebApi\WebApi\obj\Debug\WebApi.csproj.CopyComplete
 C:\Users\djule\source\PortalSSA - Projekat\WebApi\WebApi\obj\Debug\WebApi.dll
 C:\Users\djule\source\PortalSSA - Projekat\WebApi\WebApi\obj\Debug\WebApi.pdb
+D:\Back-opet\WebApi\WebApi\bin\WebApi.dll.config
+D:\Back-opet\WebApi\WebApi\bin\WebApi.dll
+D:\Back-opet\WebApi\WebApi\bin\WebApi.pdb
+D:\Back-opet\WebApi\WebApi\bin\BussinesLayer.dll
+D:\Back-opet\WebApi\WebApi\bin\DataLayer.dll
+D:\Back-opet\WebApi\WebApi\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Back-opet\WebApi\WebApi\bin\Microsoft.Web.Infrastructure.dll
+D:\Back-opet\WebApi\WebApi\bin\Newtonsoft.Json.dll
+D:\Back-opet\WebApi\WebApi\bin\Ninject.dll
+D:\Back-opet\WebApi\WebApi\bin\Ninject.Extensions.ChildKernel.dll
+D:\Back-opet\WebApi\WebApi\bin\Swashbuckle.Core.dll
+D:\Back-opet\WebApi\WebApi\bin\System.Net.Http.Formatting.dll
+D:\Back-opet\WebApi\WebApi\bin\System.Web.Http.dll
+D:\Back-opet\WebApi\WebApi\bin\System.Web.Http.WebHost.dll
+D:\Back-opet\WebApi\WebApi\bin\WebActivatorEx.dll
+D:\Back-opet\WebApi\WebApi\bin\WebApiContrib.dll
+D:\Back-opet\WebApi\WebApi\bin\BussinesLayer.pdb
+D:\Back-opet\WebApi\WebApi\bin\DataLayer.pdb
+D:\Back-opet\WebApi\WebApi\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Back-opet\WebApi\WebApi\bin\Newtonsoft.Json.xml
+D:\Back-opet\WebApi\WebApi\bin\Ninject.xml
+D:\Back-opet\WebApi\WebApi\bin\Ninject.Extensions.ChildKernel.xml
+D:\Back-opet\WebApi\WebApi\bin\System.Net.Http.Formatting.xml
+D:\Back-opet\WebApi\WebApi\bin\System.Web.Http.xml
+D:\Back-opet\WebApi\WebApi\bin\System.Web.Http.WebHost.xml
+D:\Back-opet\WebApi\WebApi\obj\Debug\WebApi.csprojResolveAssemblyReference.cache
+D:\Back-opet\WebApi\WebApi\obj\Debug\WebApi.csproj.CoreCompileInputs.cache
+D:\Back-opet\WebApi\WebApi\obj\Debug\WebApi.dll
+D:\Back-opet\WebApi\WebApi\obj\Debug\WebApi.pdb

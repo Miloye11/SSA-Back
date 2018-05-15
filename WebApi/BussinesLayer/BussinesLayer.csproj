@@ -63,10 +63,12 @@
     <Compile Include="CityBusiness.cs" />
     <Compile Include="IApartmentBusiness.cs" />
     <Compile Include="ICityBusiness.cs" />
+    <Compile Include="ILogedUserBusines.cs" />
     <Compile Include="IOwnerBusiness.cs" />
     <Compile Include="IPersonBusiness.cs" />
     <Compile Include="IRecordBusiness.cs" />
     <Compile Include="ITypeBusiness.cs" />
+    <Compile Include="LogedUserBusiness.cs" />
     <Compile Include="OwnerBusiness.cs" />
     <Compile Include="PersonBusiness.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

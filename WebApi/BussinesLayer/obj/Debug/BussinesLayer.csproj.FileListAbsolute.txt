@@ -58,3 +58,22 @@ C:\Users\djule\source\PortalSSA - Projekat\WebApi\BussinesLayer\obj\Debug\Bussin
 C:\Users\djule\source\PortalSSA - Projekat\WebApi\BussinesLayer\obj\Debug\BussinesLayer.csproj.CopyComplete
 C:\Users\djule\source\PortalSSA - Projekat\WebApi\BussinesLayer\obj\Debug\BussinesLayer.dll
 C:\Users\djule\source\PortalSSA - Projekat\WebApi\BussinesLayer\obj\Debug\BussinesLayer.pdb
+D:\Back-opet\WebApi\BussinesLayer\bin\Debug\BussinesLayer.dll
+D:\Back-opet\WebApi\BussinesLayer\bin\Debug\BussinesLayer.pdb
+D:\Back-opet\WebApi\BussinesLayer\bin\Debug\DataLayer.dll
+D:\Back-opet\WebApi\BussinesLayer\bin\Debug\Newtonsoft.Json.dll
+D:\Back-opet\WebApi\BussinesLayer\bin\Debug\Ninject.dll
+D:\Back-opet\WebApi\BussinesLayer\bin\Debug\Ninject.Extensions.ChildKernel.dll
+D:\Back-opet\WebApi\BussinesLayer\bin\Debug\System.Net.Http.Formatting.dll
+D:\Back-opet\WebApi\BussinesLayer\bin\Debug\System.Web.Http.dll
+D:\Back-opet\WebApi\BussinesLayer\bin\Debug\WebApiContrib.dll
+D:\Back-opet\WebApi\BussinesLayer\bin\Debug\DataLayer.pdb
+D:\Back-opet\WebApi\BussinesLayer\bin\Debug\Newtonsoft.Json.xml
+D:\Back-opet\WebApi\BussinesLayer\bin\Debug\Ninject.xml
+D:\Back-opet\WebApi\BussinesLayer\bin\Debug\Ninject.Extensions.ChildKernel.xml
+D:\Back-opet\WebApi\BussinesLayer\bin\Debug\System.Net.Http.Formatting.xml
+D:\Back-opet\WebApi\BussinesLayer\bin\Debug\System.Web.Http.xml
+D:\Back-opet\WebApi\BussinesLayer\obj\Debug\BussinesLayer.csprojResolveAssemblyReference.cache
+D:\Back-opet\WebApi\BussinesLayer\obj\Debug\BussinesLayer.csproj.CoreCompileInputs.cache
+D:\Back-opet\WebApi\BussinesLayer\obj\Debug\BussinesLayer.dll
+D:\Back-opet\WebApi\BussinesLayer\obj\Debug\BussinesLayer.pdb

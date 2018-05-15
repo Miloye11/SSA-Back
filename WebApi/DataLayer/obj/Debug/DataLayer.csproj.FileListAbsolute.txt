@@ -52,3 +52,20 @@ C:\Users\djule\source\PortalSSA - Projekat\WebApi\DataLayer\obj\Debug\DataLayer.
 C:\Users\djule\source\PortalSSA - Projekat\WebApi\DataLayer\obj\Debug\DataLayer.csproj.CopyComplete
 C:\Users\djule\source\PortalSSA - Projekat\WebApi\DataLayer\obj\Debug\DataLayer.dll
 C:\Users\djule\source\PortalSSA - Projekat\WebApi\DataLayer\obj\Debug\DataLayer.pdb
+D:\Back-opet\WebApi\DataLayer\bin\Debug\DataLayer.dll
+D:\Back-opet\WebApi\DataLayer\bin\Debug\DataLayer.pdb
+D:\Back-opet\WebApi\DataLayer\bin\Debug\Newtonsoft.Json.dll
+D:\Back-opet\WebApi\DataLayer\bin\Debug\Ninject.dll
+D:\Back-opet\WebApi\DataLayer\bin\Debug\Ninject.Extensions.ChildKernel.dll
+D:\Back-opet\WebApi\DataLayer\bin\Debug\System.Net.Http.Formatting.dll
+D:\Back-opet\WebApi\DataLayer\bin\Debug\System.Web.Http.dll
+D:\Back-opet\WebApi\DataLayer\bin\Debug\WebApiContrib.dll
+D:\Back-opet\WebApi\DataLayer\bin\Debug\Newtonsoft.Json.xml
+D:\Back-opet\WebApi\DataLayer\bin\Debug\Ninject.xml
+D:\Back-opet\WebApi\DataLayer\bin\Debug\Ninject.Extensions.ChildKernel.xml
+D:\Back-opet\WebApi\DataLayer\bin\Debug\System.Net.Http.Formatting.xml
+D:\Back-opet\WebApi\DataLayer\bin\Debug\System.Web.Http.xml
+D:\Back-opet\WebApi\DataLayer\obj\Debug\DataLayer.csprojResolveAssemblyReference.cache
+D:\Back-opet\WebApi\DataLayer\obj\Debug\DataLayer.csproj.CoreCompileInputs.cache
+D:\Back-opet\WebApi\DataLayer\obj\Debug\DataLayer.dll
+D:\Back-opet\WebApi\DataLayer\obj\Debug\DataLayer.pdb
