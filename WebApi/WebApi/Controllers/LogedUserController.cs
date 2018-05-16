@@ -14,7 +14,7 @@ namespace WebApi.Controllers
     {
         private ILogedUserBusiness LogedUserBusines;
 
-        public LogedUserController (ILogedUserBusiness logedUserBusiness)
+        public LogedUserController(ILogedUserBusiness logedUserBusiness)
         {
             this.LogedUserBusines = logedUserBusiness;
         }
@@ -32,16 +32,9 @@ namespace WebApi.Controllers
         {
             return this.LogedUserBusines.InsertUser(o);
         }
-        
-       /* [Route("insertlogeduserURLcopy/{o}")]
-        [HttpPost]
-        public bool InsertLogedUserURL([FromUri]LogedUser o)
-        {
-            return this.LogedUserBusines.InsertUser(o);
-        } */
 
         [Route("trancatelogeduser")]
-        [HttpDelete]
+        [HttpGet]
         public bool TrancateLogedUser()
         {
             return this.LogedUserBusines.TrancadeLogedUser();
