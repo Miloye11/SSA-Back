@@ -89,5 +89,27 @@ namespace BussinesLayer
                 return false;
             }
         }
+
+        //metoda koja brise osobu iz tabele Owners
+        public bool DeleteOwner(int id)
+        {
+            if (id > 0)
+            {
+                if (this.ownerRepository.DeleteOwner(id) > 0)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            else
+            {
+                return false;
+            }
+
+           
+        }
     }
 }

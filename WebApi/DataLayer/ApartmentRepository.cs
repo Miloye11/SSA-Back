@@ -31,7 +31,16 @@ namespace DataLayer
                     a.Address = dataReader.GetString(1);
                     a.Apartment_Number = dataReader.GetInt32(2);                   
                     a.Status = dataReader.GetString(3);
-                    a.Type_Id = dataReader.GetInt32(4);
+                    object temp0 = dataReader.GetValue(4);
+                    if (temp0.ToString().Equals(""))
+                    {
+                        a.Type_Id = -1;
+
+                    }
+                    else
+                    {
+                        a.Type_Id = dataReader.GetInt32(4);
+                    }
                     object tem = dataReader.GetValue(5);
                     
                     if (tem.ToString().Equals("") )

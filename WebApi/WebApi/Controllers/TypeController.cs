@@ -39,5 +39,13 @@ namespace WebApi.Controllers
         {
             return this.typeBusiness.UpdateTypes(t);
         }
+
+
+        [Route("deletetype/{id}")]
+        [HttpGet]
+        public bool DeleteType(int id)
+        {
+            return this.typeBusiness.DeleteType(id);
+        }
     }
 }

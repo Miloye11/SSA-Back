@@ -40,5 +40,12 @@ namespace WebApi.Controllers
             return this.ownerBusiness.UpdateOwner(o);
         }
 
+        [Route("deleteowner/{id}")]
+        [HttpGet]
+        public bool DeleteOwner(int id)
+        {
+            return this.ownerBusiness.DeleteOwner(id);
+        }
+
     }
 }

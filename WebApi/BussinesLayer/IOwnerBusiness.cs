@@ -17,6 +17,6 @@ namespace BussinesLayer
 
         List<Owner> Login(string username, string password);
 
-
+        bool DeleteOwner(int id);
     }
 }

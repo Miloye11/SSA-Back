@@ -64,5 +64,27 @@ namespace BussinesLayer
             }
             return result;
         }
+
+        //metoda koja brise tip iz tabele Types
+        public bool DeleteType(int id)
+        {
+
+            if (id > 0)
+            {
+                if (this.typeRepository.DeleteType(id) > 0)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            else
+            {
+                return false;
+            }
+
+        }
     }
 }

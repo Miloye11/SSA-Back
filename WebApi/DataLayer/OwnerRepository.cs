@@ -74,5 +74,21 @@ namespace DataLayer
                 return command.ExecuteNonQuery();
             }
         }
+
+        //metoda za delete/brisanje osoba u tabeli Owners
+        public int DeleteOwner(int id)
+        {
+            using (SqlConnection dataConnection = new SqlConnection(ConnectionString))
+            {
+                dataConnection.Open();
+
+                SqlCommand command = new SqlCommand();
+                command.Connection = dataConnection;
+                command.CommandText = "DELETE FROM Owners WHERE Owner_Id = " + id;
+
+                // koristi se za izvršenje INSERT, UPDATE ili DELETE SQL upita
+                return command.ExecuteNonQuery();
+            }
+        }
     }
 }

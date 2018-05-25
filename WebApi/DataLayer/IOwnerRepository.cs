@@ -14,5 +14,7 @@ namespace DataLayer
         int InsertOwner(Owner o);
 
         int UpdateOwner(Owner o);
+
+        int DeleteOwner(int id);
     }
 }

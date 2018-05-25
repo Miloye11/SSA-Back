@@ -90,5 +90,22 @@ namespace DataLayer
                 return command.ExecuteNonQuery();
             }
         }
+
+        //metoda za delete/brisanje tipova u tabeli Types
+        public int DeleteType(int id)
+        {
+            using (SqlConnection dataConnection = new SqlConnection(ConnectionString))
+            {
+                dataConnection.Open();
+
+                SqlCommand command = new SqlCommand();
+                command.Connection = dataConnection;
+                command.CommandText = "DELETE FROM Types WHERE Type_Id = " + id;
+
+                // koristi se za izvršenje INSERT, UPDATE ili DELETE SQL upita
+                return command.ExecuteNonQuery();
+            }
+        }
+
     }
 }

@@ -11,5 +11,7 @@ namespace BussinesLayer
         bool UpdateTypes(DataLayer.Models.Type t);
 
         List<DataLayer.Models.Type> GetAllTypeNames();
+
+        bool DeleteType(int id);
     }
 }

@@ -11,5 +11,7 @@ namespace DataLayer
         int UpdateTypes(DataLayer.Models.Type t);
 
         List<DataLayer.Models.Type> GetAllTypeNames();
+
+        int DeleteType(int id);
     }
 }
