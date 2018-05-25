@@ -93,5 +93,19 @@ namespace DataLayer
                 return command.ExecuteNonQuery();
             }
         }
+
+       public int DeleteCities(int id)
+        {
+            using (SqlConnection dataConnection = new SqlConnection(ConnectionString))
+            {
+                dataConnection.Open();
+
+                SqlCommand command = new SqlCommand();
+                command.Connection = dataConnection;
+                command.CommandText = "DELETE FROM Cities WHERE City_Id=" + id;
+
+                return command.ExecuteNonQuery();
+            }
+        }
     }
 }

@@ -11,6 +11,9 @@ namespace DataLayer
 
         int UpdateApartment(Apartment a);
 
+        int DeleteApartement(int id);
+
+        List<All> GetAllApartmentsJoined();
 
         //--------------- DEO KOJI RADI DJUSIC -----------------
         int UpdateAppartementSlobodan(int Apartment_Id);

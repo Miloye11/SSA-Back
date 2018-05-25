@@ -10,5 +10,9 @@ namespace BussinesLayer
         bool InsertApartment(Apartment a);
 
         bool UpdateApartment(Apartment a);
+
+        bool DeleteApartement(int id);
+
+        List<All> GetAllApartmentsJoined();
     }
 }

@@ -65,5 +65,24 @@ namespace BussinesLayer
             }
             return result;
         }
+        //metoda koja brise jedan grad iz table Cities
+        public bool DeleteCities (int id)
+        {
+           if (id>0)
+            {
+                if (this.cityRepository.DeleteCities(id) > 0)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+             }
+                else
+                {
+                    return false;
+                }
+        }
     }
 }
