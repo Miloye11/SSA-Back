@@ -40,5 +40,11 @@ namespace WebApi.Controllers
         {
             return this.cityBusiness.UpdateCities(c);
         }
+        [Route("deletecities/{id}")]
+        [HttpDelete]
+        public bool DeleteCities(int id)
+        {
+            return this.cityBusiness.DeleteCities(id);
+        }
     }
 }

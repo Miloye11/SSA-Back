@@ -25,6 +25,12 @@ namespace WebApi.Controllers
         {
             return this.apartmentBusiness.GetAllApartments();
         }
+        [Route("getallapartmentsjoined")]
+        [HttpGet]
+        public List<All> GetAllApartmentsJoined()
+        {
+            return this.apartmentBusiness.GetAllApartmentsJoined();
+        }
 
         [Route("insertapartment")]
         [HttpPost]
@@ -38,6 +44,12 @@ namespace WebApi.Controllers
         public bool UpdateApartment([FromBody]Apartment a)
         {
             return this.apartmentBusiness.UpdateApartment(a);
+        }
+        [Route("deleteapartment/{id}")]
+        [HttpGet]
+        public bool DeleteApartment(int id)
+        {
+            return this.apartmentBusiness.DeleteApartement(id);
         }
     }
 }

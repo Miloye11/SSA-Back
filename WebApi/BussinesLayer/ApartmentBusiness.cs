@@ -67,5 +67,36 @@ namespace BussinesLayer
                 return false;
             }
         }
+        //metoda koja brise jedan stan iz tabele Apartments
+       public bool DeleteApartement(int id)
+        {
+            if (id>0)
+            {
+                if (this.apartmentRepository.DeleteApartement(id)>0)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            else
+            {
+                return false;
+            }
+        }
+      public  List<All> GetAllApartmentsJoined()
+        {
+            List<All> list = this.apartmentRepository.GetAllApartmentsJoined();
+            if (list.Count>0)
+            {
+                return list;
+            }
+            else
+            {
+                return null;
+            }
+        }
     }
 }

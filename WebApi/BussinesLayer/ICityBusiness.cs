@@ -12,5 +12,7 @@ namespace BussinesLayer
         bool UpdateCities(City c);
 
         List<City> GetAllCityNames();
+
+        bool DeleteCities(int id);
     }
 }

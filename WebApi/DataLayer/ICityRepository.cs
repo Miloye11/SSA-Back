@@ -12,5 +12,7 @@ namespace DataLayer
         int UpdateCities(City c);
 
         List<City> GetAllCityNames();
+
+        int DeleteCities(int id);
     }
 }
