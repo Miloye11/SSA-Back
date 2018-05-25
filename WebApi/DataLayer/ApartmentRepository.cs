@@ -162,7 +162,7 @@ namespace DataLayer
 
                 SqlCommand command = new SqlCommand(); // kreiranje SQL komande
                 command.Connection = dataConnection;
-                command.CommandText = "SELECT Apartments.Apartment_Id, Apartments.Address, Apartments.Apartment_Number, Apartments.City_Id, Cities.Name, Apartments.Owner_Id, Owners.Name, Owners.Surname FROM Apartments, Owners, Cities WHERE Apartments.City_Id = Cities.City_Id AND Apartments.Owner_Id = Owners.Owner_Id";
+                command.CommandText = "SELECT Apartments.Apartment_Id, Apartments.Address, Apartments.Apartment_Number, Apartments.City_Id, Cities.Name, Apartments.Owner_Id, Owners.Name, Owners.Surname, Types.Type_Id, Types.Name FROM Apartments, Owners, Cities, Types WHERE Apartments.City_Id = Cities.City_Id AND Apartments.Owner_Id = Owners.Owner_Id";
 
                 // SQL data reader dobija vrednost virtuelne tabele koja je vraćena iz baze
                 SqlDataReader dataReader = command.ExecuteReader();
@@ -181,6 +181,8 @@ namespace DataLayer
                     a.Owner_Id = dataReader.GetInt32(5);
                     a.Owner_Name = dataReader.GetString(6);
                     a.Owner_Surname = dataReader.GetString(7);
+                    a.Type_Id = dataReader.GetInt32(8);
+                    a.Type_Name = dataReader.GetString(9);
                   
                    
                     list.Add(a);
