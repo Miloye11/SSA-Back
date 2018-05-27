@@ -28,7 +28,10 @@ namespace DataLayer
                     DataLayer.Models.Type t = new DataLayer.Models.Type();
                     t.Type_Id = dataReader.GetInt32(0);
                     t.Type_Name = dataReader.GetString(1);
-                    listToReturn.Add(t);
+                    if (t.Type_Name != "izbrisan tip")
+                    { listToReturn.Add(t); }
+                    
+                  
                 }
             }
             return listToReturn;
@@ -52,7 +55,8 @@ namespace DataLayer
                 {
                     DataLayer.Models.Type t = new DataLayer.Models.Type();
                     t.Type_Name = dataReader.GetString(0);
-                    listToReturn.Add(t);
+                    if (t.Type_Name != "izbrisan tip")
+                    { listToReturn.Add(t); }
                 }
             }
             return listToReturn;
@@ -100,7 +104,7 @@ namespace DataLayer
 
                 SqlCommand command = new SqlCommand();
                 command.Connection = dataConnection;
-                command.CommandText = "DELETE FROM Types WHERE Type_Id = " + id;
+                command.CommandText = "UPDATE Types set Name='izbrisan tip' where Type_Id" + id;
 
                 // koristi se za izvršenje INSERT, UPDATE ili DELETE SQL upita
                 return command.ExecuteNonQuery();

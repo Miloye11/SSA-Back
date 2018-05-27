@@ -31,39 +31,22 @@ namespace DataLayer
                     a.Address = dataReader.GetString(1);
                     a.Apartment_Number = dataReader.GetInt32(2);                   
                     a.Status = dataReader.GetString(3);
-                    object temp0 = dataReader.GetValue(4);
-                    if (temp0.ToString().Equals(""))
-                    {
-                        a.Type_Id = -1;
-
-                    }
-                    else
-                    {
+                   
+                  
                         a.Type_Id = dataReader.GetInt32(4);
-                    }
+                    
                     object tem = dataReader.GetValue(5);
                     
-                    if (tem.ToString().Equals("") )
-                   {
-                        a.City_Id = -1;
-
-                 }
-                   else
-                   {
+                  
                      a.City_Id = dataReader.GetInt32(5);
-                  }
-                    object temp1 = dataReader.GetValue(6);
-                    if (temp1.ToString().Equals(""))
-                    {
-                        a.Owner_Id = -1;
-                    }
-                    else
-                    {
+                 
+                  
+                      
                         a.Owner_Id = dataReader.GetInt32(6);
-                    }
 
+                    if (a.Address != "izbrisan stan")
 
-                    listToReturn.Add(a);
+                    { listToReturn.Add(a); }
                 }
             }
             return listToReturn;
@@ -107,7 +90,7 @@ namespace DataLayer
 
                 SqlCommand command = new SqlCommand();
                 command.Connection = dataConnection;
-                command.CommandText = "DELETE FROM Apartments WHERE Apartment_Id=" + id;
+                command.CommandText = "update Apartments set Address= 'izbrisan stan', Apartment_Number=0, Status= 'izbrisan stan'  WHERE Apartment_Id=" + id;
              return    command.ExecuteNonQuery();
                
 
@@ -183,9 +166,9 @@ namespace DataLayer
                     a.Owner_Surname = dataReader.GetString(7);
                     a.Type_Id = dataReader.GetInt32(8);
                     a.Type_Name = dataReader.GetString(9);
-                  
-                   
-                    list.Add(a);
+
+                    if (a.Address != "izbrisan stan")
+                    { list.Add(a); }
                 }
             }
             return list;

@@ -30,7 +30,9 @@ namespace DataLayer
                     c.City_Id = dataReader.GetInt32(0);
                     c.City_Name = dataReader.GetString(1);
                     c.Ppt = dataReader.GetInt32(2);
-                    listToReturn.Add(c);
+                    if (c.City_Name != "izbrisan grad")
+                    { listToReturn.Add(c); }
+                   
                 }
             }
             return listToReturn;
@@ -54,7 +56,8 @@ namespace DataLayer
                 {
                     City c = new City();
                     c.City_Name = dataReader.GetString(0);
-                    listToReturn.Add(c);
+                    if (c.City_Name != "izbrisan grad")
+                    { listToReturn.Add(c); }
                 }
             }
             return listToReturn;
@@ -102,7 +105,7 @@ namespace DataLayer
 
                 SqlCommand command = new SqlCommand();
                 command.Connection = dataConnection;
-                command.CommandText = "DELETE FROM Cities WHERE City_Id=" + id;
+                command.CommandText = "UPDATE Cities set Name='izbrisan grad', Ppt=0 where City_Id=" + id;
 
                 return command.ExecuteNonQuery();
             }

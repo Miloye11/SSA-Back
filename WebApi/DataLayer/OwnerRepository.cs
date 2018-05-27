@@ -38,7 +38,9 @@ namespace DataLayer
                     o.Card_Number = dataReader.GetInt32(4);
                     o.Username = dataReader.GetString(5);
                     o.Password = dataReader.GetString(6);
-                    listToReturn.Add(o);
+
+                    if (o.Name != "izbrisan vlasnik")
+                    { listToReturn.Add(o); }
                 }
             }
             return listToReturn;
@@ -84,7 +86,7 @@ namespace DataLayer
 
                 SqlCommand command = new SqlCommand();
                 command.Connection = dataConnection;
-                command.CommandText = "DELETE FROM Owners WHERE Owner_Id = " + id;
+                command.CommandText = "update Owners set Name='izbrisan vlasnik', Surname= 'izbrisan vlasnik' where Owner_Id=" + id;
 
                 // koristi se za izvršenje INSERT, UPDATE ili DELETE SQL upita
                 return command.ExecuteNonQuery();

@@ -29,7 +29,7 @@ namespace DataLayer
 
                 SqlCommand command = new SqlCommand(); // kreiranje SQL komande
                 command.Connection = dataConnection;
-                command.CommandText = "SELECT Records.Status, Records.Date_Time, Cities.Ppt, Cities.Name, Apartments.Address, Apartments.Apartment_Number, Apartments.Status, Types.Name, Persons.Name, Persons.Surname, Persons.Card_Number, Persons.JMBG, Owners.Name, Owners.Surname, Owners.Card_Number, Owners.JMBG, Apartments.City_Id, Apartments.Owner_Id, Apartments.Type_Id, Records.Apartment_Id FROM Records, Apartments, Types, Owners, Persons, Cities WHERE(Records.Apartment_Id IS NULL OR Records.Apartment_Id = Apartments.Apartment_Id) AND(Apartments.Owner_Id IS NULL OR Apartments.Owner_Id = Owners.Owner_Id) AND(Apartments.City_Id IS NULL OR Apartments.City_Id = Cities.City_Id) AND(Apartments.Type_Id = Types.Type_Id OR Apartments.Type_Id IS NULL) AND Records.Person_Id = Persons.Person_Id";
+                command.CommandText = "SELECT Records.Status, Records.Date_Time, Cities.Ppt, Cities.Name, Apartments.Address, Apartments.Apartment_Number, Apartments.Status, Types.Name, Persons.Name, Persons.Surname, Persons.Card_Number, Persons.JMBG, Owners.Name, Owners.Surname, Owners.Card_Number, Owners.JMBG FROM Records, Apartments, Types, Owners, Persons, Cities WHERE Records.Apartment_Id = Apartments.Apartment_Id AND Apartments.Owner_Id = Owners.Owner_Id AND Apartments.City_Id = Cities.City_Id AND Apartments.Type_Id = Types.Type_Id AND Records.Person_Id = Persons.Person_Id";
 
                 // SQL data reader dobija vrednost virtuelne tabele koja je vraćena iz baze
                 SqlDataReader dataReader = command.ExecuteReader();
@@ -42,65 +42,32 @@ namespace DataLayer
 
                     a.Record_Status = dataReader.GetString(0);
                     a.Date_Time = dataReader.GetDateTime(1);
-                    object temp0 = dataReader.GetValue(16);
-                    if (temp0.ToString().Equals(""))
-                    {
-                        a.Ppt = 0;
-                        a.City_Name = "izbrisan grad";
-
-                    }
-                    else
-                    {
-                        a.Ppt = dataReader.GetInt32(2);
+                   
+                         a.Ppt = dataReader.GetInt32(2);
                         a.City_Name = dataReader.GetString(3);
-                    }
+                    
 
-                    object temp1 = dataReader.GetValue(19);
-                    if (temp1.ToString().Equals(""))
-                    {
-                        a.Address = "Izbrisan stan";
-                        a.Apartment_Number = -1;
-                        a.Appartment_Status = "Izbrisan stan";
-
-                    }
-                    else
-                    {
+                  
                         a.Address = dataReader.GetString(4);
                         a.Apartment_Number = dataReader.GetInt32(5);
                         a.Appartment_Status = dataReader.GetString(6);
-                    }
-                    object temp2 = dataReader.GetValue(18);
-                    if (temp2.ToString().Equals(""))
-                    {
-
-                        a.Type_Name = "Izbrisan tip";
-                    }
-                    else
-                    {
+                   
+                   
                         a.Type_Name = dataReader.GetString(7);
-                    }
+                   
 
                    
                     a.Person_Name = dataReader.GetString(8);
                     a.Person_Surname = dataReader.GetString(9);
                     a.Card_Number = dataReader.GetInt32(10);
                     a.JMBG = dataReader.GetString(11);
-                    object temp3 = dataReader.GetValue(4);
-                    if (temp3.ToString().Equals(""))
-                    {
-                        a.Owner_Name = "Vlasnik izbrisan";
-                        a.Owner_Surname = "Vlasnik izbrisan";
-                        a.Owner_Card_Number = 0;
-                        a.Owner_JMBG = "Vlasnik izbrisan";
-
-                    }
-                    else
-                    {
+                   
+                   
                         a.Owner_Name = dataReader.GetString(12);
                         a.Owner_Surname = dataReader.GetString(13);
                         a.Owner_Card_Number = dataReader.GetInt32(14);
                         a.Owner_JMBG = dataReader.GetString(15);
-                    }
+                   
 
                     
 
