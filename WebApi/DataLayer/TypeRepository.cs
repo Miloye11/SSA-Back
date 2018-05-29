@@ -104,7 +104,7 @@ namespace DataLayer
 
                 SqlCommand command = new SqlCommand();
                 command.Connection = dataConnection;
-                command.CommandText = "UPDATE Types set Name='izbrisan tip' where Type_Id" + id;
+                command.CommandText = "UPDATE Types set Name='izbrisan tip' where Type_Id =" + id;
 
                 // koristi se za izvršenje INSERT, UPDATE ili DELETE SQL upita
                 return command.ExecuteNonQuery();

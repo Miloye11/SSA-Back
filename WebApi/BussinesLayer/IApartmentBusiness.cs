@@ -5,7 +5,7 @@ namespace BussinesLayer
 {
     public interface IApartmentBusiness
     {
-        List<Apartment> GetAllApartments();
+      
 
         bool InsertApartment(Apartment a);
 

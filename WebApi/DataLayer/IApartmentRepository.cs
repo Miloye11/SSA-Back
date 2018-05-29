@@ -5,7 +5,7 @@ namespace DataLayer
 {
     public interface IApartmentRepository
     {
-        List<Apartment> GetAllApartments();
+      
 
         int InsertApartment(Apartment a);
 

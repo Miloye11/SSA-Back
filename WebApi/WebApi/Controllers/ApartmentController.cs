@@ -20,11 +20,6 @@ namespace WebApi.Controllers
             this.apartmentBusiness = apartmentBusiness;
         }
 
-        [Route("getallapartments")]
-        public List<Apartment> GetAllPersons()
-        {
-            return this.apartmentBusiness.GetAllApartments();
-        }
         [Route("getallapartmentsjoined")]
         [HttpGet]
         public List<All> GetAllApartmentsJoined()

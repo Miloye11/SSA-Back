@@ -14,19 +14,7 @@ namespace BussinesLayer
             this.apartmentRepository = apartmentRepository;
         }
 
-        // metoda koja vraća listu svih stanova ako ih uopšte ima u bazi
-        public List<Apartment> GetAllApartments()
-        {
-            List<Apartment> apartments = this.apartmentRepository.GetAllApartments();
-            if (apartments.Count > 0)
-            {
-                return apartments;
-            }
-            else
-            {
-                return null;
-            }
-        }
+        
 
         //metoda koja ubacuje podatke u tabelu Apartments
         public bool InsertApartment(Apartment a)

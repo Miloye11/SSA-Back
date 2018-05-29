@@ -10,48 +10,7 @@ namespace DataLayer
         //konekcioni string
         private string ConnectionString = ConfigurationManager.AppSettings["ConnectionString"];
 
-        //metoda za prikaz svih stanova iz tabele Apartmant
-        public List<Apartment> GetAllApartments()
-        {
-            List<Apartment> listToReturn = new List<Apartment>();
-            using (SqlConnection dataConnection = new SqlConnection(this.ConnectionString))
-            {
-                dataConnection.Open();
-
-                SqlCommand command = new SqlCommand();
-                command.Connection = dataConnection;
-                command.CommandText = "SELECT * FROM Apartments";
-
-                SqlDataReader dataReader = command.ExecuteReader();
-
-                while (dataReader.Read())
-                {
-                    Apartment a = new Apartment();
-                    a.Apartment_Id = dataReader.GetInt32(0);
-                    a.Address = dataReader.GetString(1);
-                    a.Apartment_Number = dataReader.GetInt32(2);                   
-                    a.Status = dataReader.GetString(3);
-                   
-                  
-                        a.Type_Id = dataReader.GetInt32(4);
-                    
-                    object tem = dataReader.GetValue(5);
-                    
-                  
-                     a.City_Id = dataReader.GetInt32(5);
-                 
-                  
-                      
-                        a.Owner_Id = dataReader.GetInt32(6);
-
-                    if (a.Address != "izbrisan stan")
-
-                    { listToReturn.Add(a); }
-                }
-            }
-            return listToReturn;
-        }
-
+        
         //metoda za ubacivanje novog stana u tabelu Apartments
         public int InsertApartment(Apartment a)
         {
